@@ -1,3 +1,5 @@
+import random
+
 def printName():
 	file_name = input("Input the .txt file containing the roster: ")
 	my_file = open(file_name, "r")
@@ -11,7 +13,7 @@ def printName():
 		
 	my_file.close()
 	
-	print(list_names)
+	print(" ".join(list_names[random.randint(0, len(list_names)-1)]))
 	
 	
 printName();
