@@ -1,3 +1,8 @@
+#Yaying Liang Li
+#SoftDev
+#K<02> -- Prepping - Create a Python program that prints a SoftDev student's name
+#2021-09-23
+
 import random
 
 def printName():
