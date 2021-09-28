@@ -27,17 +27,16 @@ def printName():
               "Wenhao Dong", "Yaying Liang Li", "Yuqing Wu"]
    }
 
-   my_file = open(file_name, "r")
-   
-   list_names = []
-   #source: kite.com
-   for line in my_file:
-           line_list = line.split()
-           list_names.append(line_list)
-      
-   my_file.close()
+   #Find length of each list
+   pd1_len = len(names['pd1'])
+   pd2_len = len(names['pd2'])
 
-   print(" ".join(list_names[random.randint(0, len(list_names)-1)]))
+   #Choose a random person
+   num = random.randint(0, pd1_len + pd2_len - 1)
+   if num < pd1_len:
+      print("period1: " + names['pd1'][num])
+   else:
+      print("period2: " + names['pd2'][num - pd1_len])
    
    
 printName();
