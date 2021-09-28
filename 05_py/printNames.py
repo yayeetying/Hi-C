@@ -3,11 +3,23 @@
 #K<05> -- Amalgamation of Python Random Name Generator Code
 #2021-09-27
 
-#Summary of Trio Discussion
+# Summary of Trio Discussion
 #We discussed whether we wanted our user to choose which period the names came
 #from, and we made an executive decision in the end not to prompt the user for
 #a period. Instead, we decided that the program would randomly choose a name
-#from any period - as Kevin said, a "truly random" program. 
+#from any period - as Kevin said, a "truly random" program.
+# Discoveries
+
+#If we did prompt the user to enter a period, we'd need some conditional
+#in case the user typed in a period without a roster
+
+# Questions
+#What are the benefits of storing the names with a dictionary as opposed to
+#with a .txt file?
+
+# Comments
+#random.randint(a,b) is inclusive on both ends - and since indexes start at 0,
+#that's why the endpoint has to have -1
 
 
 import random
