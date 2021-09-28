@@ -3,6 +3,13 @@
 #K<05> -- Amalgamation of Python Random Name Generator Code
 #2021-09-27
 
+#Summary of Trio Discussion
+#We discussed whether we wanted our user to choose which period the names came
+#from, and we made an executive decision in the end not to prompt the user for
+#a period. Instead, we decided that the program would randomly choose a name
+#from any period - as Kevin said, a "truly random" program. 
+
+
 import random
 
 def printName():
