@@ -1,0 +1,20 @@
+Team Best Squared: Yaying Liang Li, Yoonah Chang, Josh Kloepfer, Justin Zou
+SoftDev
+K08 -- Cross Pollination (QCCs on workshop 06)
+2021-09-30
+
+Questions:
+-How do we change Justin's code into a function?
+-Was there a simpler way to read through Yaying's file without looping through each character in a string?
+-If random.randint doesn't fall into a range, what happens? Would the best solution then to just be to find another random int and try again?
+
+Comments:
+-Justin's usage of floats and intervals was nice.
+-Interesting to see use of randomchoices in Yaying's code (instead of other random methods)
+-Yoonah's code is similar to Justin's - in her case, she multiplied everything by 10 to avoid using decimals.
+-Josh added percentages repeatedly seems very efficient!
+-Overall: Most members started out in similar ways to read the file and convert the contents into a dictionary. Afterwards, we also seemed to use this "intervals" idea and random number methods to get our randomized weighted probability.
+
+Concerns:
+-highkeyhelpi'mlackingsomuchsleepimightcry
+-Justin's code mayhaps should have been a function
