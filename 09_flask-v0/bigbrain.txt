@@ -30,4 +30,11 @@ Observations (Yaying):
 - when creating my virtual environment, I had to include the path of the folder in addition to its name
 ** I needed to write python3 in the terminal instead of just python when creating the virtual environment - I'm probably one of those kids who have python2 and python3 installed in my computer, and it can't differentiate between which version I'm calling.
 - if I didn't include a name for the virtual environment, it seems like it just takes on the name of the directory above it
+- also got same warning as Josephine!
 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
