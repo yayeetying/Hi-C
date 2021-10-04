@@ -1,15 +1,17 @@
-Josephine Lee with Ducky: Kitty, Yaying Liang Li with Ducky: Blob
+!Hi-C! Josephine Lee with Ducky: Kitty, Yaying Liang Li with Ducky: Blob
 SoftDev
 K09 -- Observations With First Python App
 2021-10-03
 
-Q0: We have seen similar syntax in Java when learning about inheritance.
+Q0: We have seen similar syntax in Java when learning about inheritance. Following that idea, it looks like we're making an instance of the Flask class and calling it app.
+
 Q1: '/' usually describes the path to a particular file. '/' signifies going into a subfolder.
+
 Q2: _name_ will print to the terminal.
-Q3: No, this will not appear anywhere. Nothing is being printed; the function hello_world
-is simply returning it. We can use return values elsewhere, but it won't be printed automatically.
-Q4: .run() is also seen in Python and in Java. However, in Java, run() 
-would refer to a method written by the user.
+
+Q3: No, this will not appear anywhere. Nothing is being printed; the function hello_world is simply returning "No hablo queso!" We can use return values elsewhere (ie. in another function), but it won't be printed automatically.
+
+Q4: .run() is seen in both Python and in Java. However, in Java, run() would refer to a method written by the user.
 
 Observations (Josephine):
 - I got this information:
@@ -23,3 +25,4 @@ Observations (Josephine):
 but I got this message:
 'export' is not recognized as an internal or external command,
 operable program or batch file
+
