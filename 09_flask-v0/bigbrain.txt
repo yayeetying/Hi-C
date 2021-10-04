@@ -26,3 +26,8 @@ but I got this message:
 'export' is not recognized as an internal or external command,
 operable program or batch file
 
+Observations (Yaying):
+- when creating my virtual environment, I had to include the path of the folder in addition to its name
+** I needed to write python3 in the terminal instead of just python when creating the virtual environment - I'm probably one of those kids who have python2 and python3 installed in my computer, and it can't differentiate between which version I'm calling.
+- if I didn't include a name for the virtual environment, it seems like it just takes on the name of the directory above it
+
