@@ -8,8 +8,8 @@
 #from, and we made an executive decision in the end not to prompt the user for
 #a period. Instead, we decided that the program would randomly choose a name
 #from any period - as Kevin said, a "truly random" program.
-# Discoveries
 
+# Discoveries
 #If we did prompt the user to enter a period, we'd need some conditional
 #in case the user typed in a period without a roster
 
