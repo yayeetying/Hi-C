@@ -12,7 +12,7 @@ K11 -- Some Things Never Change
 -Difference between website and webpage?
 
 Predictions:
--When we access the foo file via the localhost link, we predict that the computer will download the file. Andy experimented with the link and added .txt to the end of the link and also added .txt as the file extension of foo - when he did this, the webpage didn't 
+-When we access the foo file via the localhost link, we predict that the computer will download the file. Andy experimented with the link and added .txt to the end of the link and also added .txt as the file extension of foo - when he did this, the webpage printed out the contents of the file. We hypothesized that the computer doesn't understand what to do with files without file extensions, and so it'll download the file.
 
 Observations:
 -When we copied the link in foo and we went to the local host, the web page prompted us to download the file foo (plain text).
