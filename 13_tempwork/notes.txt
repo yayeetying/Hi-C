@@ -3,6 +3,10 @@
 #K13 - Template for Success
 #2021-10-08
 
+Step 0: Notes on Individual Codes
+* by 10 = no decimals
+str.(<list>) turns the list into a string 
+
 EGO:
 - egoless programming helps us detect errors, create clearer and more understandable code, eliminate inefficient code (which is more efficient in the long-run), and increases the competence of the group coders
 - teaches the people who read the code because they have to understand it to critique it
