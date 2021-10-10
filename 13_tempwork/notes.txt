@@ -5,7 +5,7 @@
 
 Step 0: Notes on Individual Codes
 * by 10 = no decimals
-str.(<list>) turns the list into a string 
+str(<list>) turns the list into a string (type-casting)
 
 EGO:
 - egoless programming helps us detect errors, create clearer and more understandable code, eliminate inefficient code (which is more efficient in the long-run), and increases the competence of the group coders
