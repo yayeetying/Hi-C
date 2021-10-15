@@ -16,10 +16,10 @@ Predictions:
   *In authenticate, the requests won't be asked because there's no render_template(<template>)
 
 Observations:
--In the terminal, information including the name of the flask object, the website that is opened, any arguments, and "heading information" is printed
+-When we go onto the webpage (default page), we see in the terminal information including the name of the flask object, the website that is opened, any arguments, and "heading information" is printed
   -In the default page of the website that is accessed, there are no arguments in the arguments dictionary printed in the terminal
   -The input of the form becomes a variable called 'username' as put in login.html
--There was only 1 input box when we ran the "/" page - but there are two input <> in HTML file
+-There was only 1 input box when we ran the "/" page - but there are two input tags <> in HTML file
   -Removing second input line in HTML file removes the "Submit Query" button!! (can still submit using /enter/)
   -If you click on "Submit Query" --> user is brought to /auth page (with the variables containing the arguments being present in the url)
   -Why? Because <form action="/auth"> makes the form perform this action when the code inside <form> </form> is executed
