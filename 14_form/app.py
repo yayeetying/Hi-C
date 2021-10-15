@@ -19,7 +19,8 @@ trioTASK:
 Some will work as written; other sections will not. Can you predict which?
 Devise some simple tests you can run to "take apart this engine," as it were.
 Execute your tests. Process results.
-PROTIP: Insert your own in-line comments wherever they will help your future self and/or current teammates understand what is going on.
+PROTIP: Insert your own in-line comments wherever they will help your future self 
+and/or current teammates understand what is going on.
 '''
 
 @app.route("/") #, methods=['GET', 'POST'])
@@ -51,8 +52,9 @@ def authenticate():
     #print(request.args['username'])
     print("***DIAG: request.headers ***")
     print(request.headers)
-    username = request.form['username']
-    return render_template( 'response.html', method=request.method, name=username)  #response to a form submission
+    
+    username = request.args['username']
+    return render_template('response.html', method=request.method, username=username)  #response to a form submission
 
     
 if __name__ == "__main__": #false if this file imported as module
