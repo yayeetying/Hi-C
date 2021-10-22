@@ -1,4 +1,3 @@
-
 #Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
 #SoftDev
 #K16 -- All About Database
@@ -15,12 +14,34 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+#roster table
+clearTable = "DROP TABLE IF EXISTS roster" # clear if the tables exists
+c.execute((clearTable))
+command1 = "CREATE TABLE IF NOT EXISTS roster (name TEXT, age INTEGER, id INTEGER) " # create table if it does not exist with parameters
+c.execute((command1))    # run SQL statement
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+with open('students.csv') as csv_file: # read students csv file
+    reader = csv.reader(csv_file, delimiter=',')
+    for row in reader:
+        if row[0] != "name":
+            info = [row[0], row[1], row[2]] # add data from csv file to list
+            addData = "INSERT INTO roster VALUES(?,?,?)" # accept parameters in values
+            c.execute(addData,info) # add parameters to addData command
 
+#classes table
+clearTable = "DROP TABLE IF EXISTS classes" # clear if the tables exists
+c.execute((clearTable))
+command2 = "CREATE TABLE IF NOT EXISTS classes (name TEXT, mark INTEGER, id INTEGER) " # create table if it does not exist with parameters
+c.execute((command2))    # run SQL statement
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+with open('courses.csv') as csv_file: # read classes csv file
+    reader = csv.reader(csv_file, delimiter=',')
+    for row in reader:
+        if row[0] != "code":
+            info = [row[0], row[1], row[2]] # add data from csv file to list
+            addData = "INSERT INTO classes VALUES(?,?,?)" # accept parameters in values
+            c.execute(addData,info) # add parameters to addData command
+
 
 #==========================================================
 
