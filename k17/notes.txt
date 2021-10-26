@@ -1,3 +1,8 @@
+Team threeCoffeePeanuts: Jesse Xie, Yaying Liang Li, Ryan Wang
+SoftDev
+K17 -- P00: Half Quick
+2021-10-25
+
 Program Components:
 Flask:
 -Flask will host our code onto a localhost, in which it will display html code from our templates folder onto various pages
