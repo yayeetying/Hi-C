@@ -1,0 +1,2 @@
+-If we look at the JSON file's raw data, we can see that each key-value pay is separated by commas - we can convert this into a dictionary using .loads()
+-Get request
