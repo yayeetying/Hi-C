@@ -1,0 +1,3 @@
+-Stack lines of CSS code in inline by separating each line with a ; 
+  -style="background: lightgray; color: white"
+*lightgray is one word
