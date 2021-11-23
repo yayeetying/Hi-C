@@ -1,0 +1,10 @@
+-Stack lines of CSS code in inline by separating each line with a ; 
+  -style="background: lightgray; color: white"
+*lightgray is one word
+
+-can specify color with word (gray), hex (#808080), and rbg (rbg(128,128,128))
+
+**Biggest tip!!! If unsure of how margin/border/padding/contents work, INSPECT ELEMENT because it gives you all of the elements' margins/borders line by line!
+
+-columns property: <column-width> <column-count>
+  -width: defines min width for each column; count: defines max num of columns
