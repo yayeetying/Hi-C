@@ -11,12 +11,15 @@ app = Flask(__name__)
 @app.route("/")
 def rest_demo():
     http = request.urlopen("https://api.nasa.gov/planetary/apod?api_key=qsb4nvuGri4tJe3q6REknzJbP5xO1OZnJBDfLKMG") #HTTP Response object (containing the JSON info)
-    print("http response object:" + http)
+    print(http)
+
     j = json.load(http) #j is a dictionary of the JSON info
-    print("dictionary:" + j)
+    print(j)
+
     link = j['url']
-    print("value of the url key:" + link)
-    return link
+    print(link)
+
+    return render_template("main.html", pic = link)
 
 
 if __name__ == "__main__":

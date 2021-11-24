@@ -1,4 +1,14 @@
--If we look at the JSON file's raw data, we can see that each key-value pay is separated by commas - we can convert this into a dictionary using .loads()
+-If we look at the JSON file's raw data, we can see that each key-value pay is
+separated by commas - we can convert this into a dictionary using .loads()
 -Get request
 
--let's say j is a dictionary containing JSON info; if you return j, you serve information as JSON info (pink text); if you return string(j), you serve the dictionary's information as a string
+-let's say j is a dictionary containing JSON info;
+if you return j, you serve information as JSON info (pink text);
+if you return string(j), you serve the dictionary's information as a string
+
+**GOT ERROR BELOW (when I ran the same app.py on the lab machines, no error
+appeared; when I ran app.py on my Mac, below error appeared)
+**ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED]
+certificate verify failed: unable to get local issuer certificate (_ssl.c:1108)
+**FIX: Mac OS —> Applications —> Python 3.8 (whatever version you have) —>
+Double click "Install Certificates.command"
