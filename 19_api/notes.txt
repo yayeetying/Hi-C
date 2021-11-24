@@ -1,3 +1,7 @@
+Team fourCoffeePeanuts: Yaying Liang Li, Thomas Yu
+SoftDev
+K19 -- A RESTful Joruney Skyward
+
 -If we look at the JSON file's raw data, we can see that each key-value pay is
 separated by commas - we can convert this into a dictionary using .loads()
 -Get request
@@ -12,3 +16,7 @@ appeared; when I ran app.py on my Mac, below error appeared)
 certificate verify failed: unable to get local issuer certificate (_ssl.c:1108)
 **FIX: Mac OS —> Applications —> Python 3.8 (whatever version you have) —>
 Double click "Install Certificates.command"
+
+*Open the HTTP Response object holding the JSON info and convert the JSON info
+into a dictionary. Get the values of the "url" and "explanation" keys &
+render these infos in the HTML file
