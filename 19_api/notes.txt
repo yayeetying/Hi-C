@@ -1,4 +1,4 @@
-Team fourCoffeePeanuts: Yaying Liang Li, Thomas Yu
+Team dinoClock: Yaying Liang Li, Thomas Yu
 SoftDev
 K19 -- A RESTful Joruney Skyward
 
