@@ -8,3 +8,9 @@
 
 -columns property: <column-width> <column-count>
   -width: defines min width for each column; count: defines max num of columns
+
+-list-style-type: none
+-^means to remove the bullet points in a list
+
+-text-decoration: none
+-^means all those pesky lil underlines (etc.) in links, disappears
