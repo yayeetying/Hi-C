@@ -1,3 +1,11 @@
+Yaying Liang Li
+SoftDev pd2
+K18 -- CSS basics
+2021-11-22
+
+Lorem Ipsum Generator used: Pokemon ipsum generator
+https://pokemipsum.com/
+
 -Stack lines of CSS code in inline by separating each line with a ; 
   -style="background: lightgray; color: white"
 *lightgray is one word
