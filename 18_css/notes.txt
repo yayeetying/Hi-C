@@ -15,4 +15,8 @@
 -text-decoration: none
 -^means all those pesky lil underlines (etc.) in links, disappears
 
+-INTERNAL CSS: <style> should go in between <html> and </html>
+
 -if id="WholeColumn," then when you're doing CSS and you want to CSS that id, do #WholeColumn{<CSS here>}
+
+-EXTERNAL CSS sheet: include link to CSS file within head section of page
