@@ -19,7 +19,10 @@ def rest_demo():
     link = j['url']
     print(link)
 
-    return render_template("main.html", pic = link)
+    explanation = j['explanation']
+    print(explanation)
+
+    return render_template("main.html", pic = link, description = explanation)
 
 
 if __name__ == "__main__":
