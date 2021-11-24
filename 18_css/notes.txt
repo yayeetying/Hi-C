@@ -14,3 +14,5 @@
 
 -text-decoration: none
 -^means all those pesky lil underlines (etc.) in links, disappears
+
+-if id="WholeColumn," then when you're doing CSS and you want to CSS that id, do #WholeColumn{<CSS here>}
