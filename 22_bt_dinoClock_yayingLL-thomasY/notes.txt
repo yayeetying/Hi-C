@@ -1,0 +1,2 @@
+-to use root variables from bootstrap, do var(<variable name>)
+-ie. background: var(--bs-blue)
