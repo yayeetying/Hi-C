@@ -34,3 +34,6 @@ Q1
 - Didn't work much with Foundation features
 	- However quick glance at documentation -> seems to be able to provide the same features
 	- Look at navbar -> seems much easier to understand compared to Bootstrap
+
+- Feels like there is more Bootstrap documentation than Foundation documentation
+  - Wanted to look up info on block-container; could not find in Foundation
