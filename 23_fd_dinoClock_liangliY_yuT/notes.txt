@@ -1,0 +1,36 @@
+Team dinoClock: Yaying Liang Li, Thomas Yu
+SoftDev
+K23 -- No. 2?
+2021-12-01
+
+DISCO
+- You can manually set the sizes for each cell in a grid at three breakpoints (small, medium, large)
+	- Bootstrap has set sizes for breakpoints
+- Grid padding x and grid padding y are automatic
+- Grid x refers to a row of cells
+	- If too long will snap to the next line
+- Grid y refers to a column of cells
+	- Snaps based on window width, not window height
+	- Maintains set height for the entire grid (changes cell height)
+- The auto tag automatically fills the rest of the page
+- A wrapper class is needed in order to get independent scrolling bodies
+- Cell sizes work similarly to Bootstrap (12 sections, number with the cell size is how many sections of the window the cell takes up)
+
+QCC
+- Can you have the scrolling body work for multiple cell sizes
+	- Only got it working for one size (small, medium, or large)
+	- No longer a scrolling body for the other 2 sizes
+
+Q0
+- No I did not consult resources beyond the neighboring duo's on-ramp
+	- Was quite simple, although there was not much to work with
+	- Only had grid, padding, and independent scrolling bodies
+
+Q1
+- Note exactly sure -> think I prefer Bootstrap more
+	- Spent more time learning it myself -> more exploration into more features (rather than just what we feel are core)
+		- Leads to more comfort
+	- Classes that I worked with in Bootstrap seem more self-explanatory?
+- Didn't work much with Foundation features
+	- However quick glance at documentation -> seems to be able to provide the same features
+	- Look at navbar -> seems much easier to understand compared to Bootstrap
