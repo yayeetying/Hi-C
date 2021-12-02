@@ -37,3 +37,4 @@ Q1
 
 - Feels like there is more Bootstrap documentation than Foundation documentation
   - Wanted to look up info on block-container; could not find in Foundation
+  - BUT there are videos in Foundation documentation (gives visual to code)
