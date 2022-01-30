@@ -95,3 +95,6 @@ HINT: If Apache shows default webpage instead of Flask app, run:
 sudo a2dissite 000-default.conf
 ```
 then apply changes again :)
+
+### Resources
+- https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps

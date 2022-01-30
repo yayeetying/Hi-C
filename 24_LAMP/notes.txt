@@ -1,0 +1,15 @@
+Yaying Liang Li
+Notes for creating a DigitalOcean Droplet (Virtual Machine)
+equipped with Ubuntu 20.04 and Apache2, and running Flask app
+
+- access Droplet by using DigitalOcean console
+  - Annabel tips!: OR if you want to launch Droplet in regular computer
+  instead of opening console everytime, run `ssh [user]@[droplet_ip]`
+
+- **Important** use IPV4 addy in virtual host config file
+- ***IMPORTANTX2*** if Apache shows shows default webpage instead of Flask app,
+run "sudo a2dissite 000-default.conf"
+- to apply changes: "sudo service apache2 restart"
+
+***thank Annabel for patience and help***
+***also how-to guide by EK (2), AJ (2), and NA (2)
