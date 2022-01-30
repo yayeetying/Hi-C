@@ -29,6 +29,13 @@ sudo a2enmod wsgi
 ```
 cd /var/www/
 ```
+```
+sudo mkdir <FlaskApp>
+cd <FlaskApp>
+sudo mkdir <FlaskApp>
+cd <FlaskApp>
+sudo mkdir static templates
+```
 6. Add contents of flask app into init.py
 ```
 sudo nano __init__.py
