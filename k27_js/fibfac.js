@@ -1,13 +1,26 @@
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
-// SoftDev pd0
+// Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
+// SoftDev pd1
 // K27 -- Basic functions in JavaScript
-// 2022-02-03r
+// 2022-02-04
 // --------------------------------------------------
 
+function fact(n) { //1, 1, 2, 6, 24, 120
+  if (n <= 1) {
+    return 1;
+  }
+  else {
+    return n * fact(n-1);
+  }
+}
 
-// as a duo...
-// pair programming style,
-// implement a fact and fib fxn
-
-
-//Do whatever you think is needed. Think: S I M P L E.   Think: S M A R T.
+function fib(n) { //0, 1, 1, 2, 3, 5, 8
+  if (n==0) {
+    return 0;
+  }
+  else if (n <= 2) {
+    return 1;
+  }
+  else {
+    return fib(n-1) + fib(n-2);
+  }
+}
