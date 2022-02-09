@@ -100,10 +100,10 @@ function fib(n) { //0, 1, 1, 2, 3, 5, 8
 function gcd(a, b) {
   if (a == b) return a; //gcd of same number is that number
 
-  small = Math.max(a,b)/2;
+  small = Math.max(a,b)/2; //can also sqrt it!
   var ans = 1; //1 goes into every number
   for (let i = 1; i <= small; i++) {
-    if (a % i == 0 && b % i == 0) { //i is divisible by a and by b
+    if (a % i == 0 && b % i == 0) { //a is divisible by i and b is divisible by i
       ans = i;
     }
   }
@@ -114,3 +114,11 @@ var displ = function() {
   var item = document.getElementById("div1");
   item.innerHTML = fib(5)
 };
+
+var elemento = document.getElementById("b");
+
+var change = function() {
+  elemento.classList.add("green");
+};
+
+elemento.addEventListener("click", change);
