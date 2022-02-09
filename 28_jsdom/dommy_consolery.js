@@ -1,24 +1,24 @@
 /*
    your PPTASK:
-   
+
    Test drive each bit of code in this file,
     and insert comments galore, indicating anything
      you discover,
     	have questions about,
     		or otherwise deem notable.
-    		
+
     		Write with your future self or teammates in mind.
-    		
-    		If you find yourself falling out of flow mode, consult 
+
+    		If you find yourself falling out of flow mode, consult
     		other teams
     		MDN
 
    A few comments have been pre-filled for you...
-   
+
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon 
+// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
 // SoftDev pd0
 // K28 -- Getting more comfortable with the dev console and the DOM
 // 2022-02-08t
@@ -84,7 +84,38 @@ var stripe = function() {
   }
 };
 
-//insert your implementations here for...
-// FIB
-// FAC
+
+
+function fact(n) { //1, 1, 2, 6, 24, 120
+  if (n <= 1) {
+    return 1;
+  }
+  else {
+    return n * fact(n-1);
+  }
+}
+
+function fib(n) { //0, 1, 1, 2, 3, 5, 8
+  if (n==0) {
+    return 0;
+  }
+  else if (n <= 2) {
+    return 1;
+  }
+  else {
+    return fib(n-1) + fib(n-2);
+  }
+}
+
+function gcd(a, b) {
+  small = Math.min(a,b)/2;
+  ans = 1; //1 goes into every number
+  for (int i = 1; i < small; i++) {
+    if (a % i == 0 && b % i == 0) { //i is divisible by a and by b
+      ans = i;
+    }
+  }
+  return ans;
+
+}
 // GCD
