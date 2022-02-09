@@ -26,7 +26,7 @@
 
 //send diagnostic output to console
 //(Ctrl-Shift-K in Firefox to reveal console)
-console.log("AYO");
+console.log("AYO"); //console prints this out
 
 var i = "hello";
 var j = 20;
@@ -108,9 +108,11 @@ function fib(n) { //0, 1, 1, 2, 3, 5, 8
 }
 
 function gcd(a, b) {
-  small = Math.min(a,b)/2;
-  ans = 1; //1 goes into every number
-  for (int i = 1; i < small; i++) {
+  if (a == b) return a; //gcd of same number is that number
+
+  small = Math.max(a,b)/2;
+  var ans = 1; //1 goes into every number
+  for (let i = 1; i <= small; i++) {
     if (a % i == 0 && b % i == 0) { //i is divisible by a and by b
       ans = i;
     }
