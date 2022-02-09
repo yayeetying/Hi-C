@@ -18,11 +18,10 @@
    (delete this block comment once you are done)
 */
 
-// Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-// SoftDev pd0
-// K28 -- Getting more comfortable with the dev console and the DOM
-// 2022-02-08t
-// --------------------------------------------------
+//Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
+//SoftDev pd1
+//K28 -- Getting more comfortable with the dev console and the DOM
+//2022-02-08
 
 
 //send diagnostic output to console
@@ -85,7 +84,8 @@ var stripe = function() {
 };
 
 
-
+//diff btwn "var fact = function(n)" and "function fact(n)"?
+//fact acts ~ to var; need to assign it before you can reference it
 function fact(n) { //1, 1, 2, 6, 24, 120
   if (n <= 1) {
     return 1;
@@ -118,4 +118,3 @@ function gcd(a, b) {
   return ans;
 
 }
-// GCD
