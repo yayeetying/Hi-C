@@ -44,7 +44,7 @@ var o = { 'name' : 'Thluffy',
           age : 15,
           items : [10, 20, 30, 40],
           morestuff : {a : 1, b : 'ayo'},
-          func : function(x) {
+          func : function(x) { //access this func by doing o.func(<num>)
             return x+30;
           }
         };
@@ -56,22 +56,30 @@ var addItem = function(text) {
   newitem.innerHTML = text;
   list.appendChild(newitem);
 };
+//addItem() returns undefined, and adds an item to end of list w/ text="undefined"
+//items newly added are colored black (no color in class="xxx" yet)
 
 
 var removeItem = function(n) {
   var listitems = document.getElementsByTagName('li');
   listitems[n].remove();
 };
+//index out of bounds error looks like this: Uncaught TypeError: listitems[n] is undefined
 
-
+//paints items red IF they are not already colored (ie. black --> red)
+//does this by adding "red" to the class of the element
 var red = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {
     items[i].classList.add('red');
   }
 };
+//red(5) returns undefined, but the above painting fxning still occurs
 
 
+//index is even, paint red
+//index is odd, paint blue
+//if element is already painted (has stuff in class="xxx"), won't change
 var stripe = function() {
   var items = document.getElementsByTagName("li");
   for(var i = 0; i < items.length; i++) {

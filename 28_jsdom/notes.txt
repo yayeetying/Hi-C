@@ -5,3 +5,14 @@ K28 -- Getting more comfortable with the dev console and the DOM
 
 * for for loops, 'int i = 1' --> 'let i = 1'
 * console.log(var) [var can be string, int, etc] seems to be print statement in console for js
+  - has undefined after it(?); what is undefined?
+* in console, if type in just the var name, it prints out the contents of the var
+* if element already is painted (has stuff in class="xxx"), element's colors won't change even after calling red or stripe
+
+zhong1 yao4 de code snippets
+* console.log("AYO");
+* document.getElementById("thelist");
+* document.createElement("li"); // <li> blahblah </li>
+* newitem.innerHTML = text; <blah> text </blah>
+* var listitems = document.getElementsByTagName('li'); //gets you a list of all elements with tag <li>
+* items[i].classList.add('red'); //adds red to class of element
