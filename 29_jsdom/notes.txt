@@ -1,18 +1,9 @@
-Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
+Team ChocolateVanilla:: Tomas Acuna, Yaying Liang Li
 SoftDev pd1
-K28 -- Getting more comfortable with the dev console and the DOM
-2022-02-08
+K29 -- Clicky clicky events
+2022-02-10
 
-* for for loops, 'int i = 1' --> 'let i = 1'
-* console.log(var) [var can be string, int, etc] seems to be print statement in console for js
-  - has undefined after it(?); what is undefined?
-* in console, if type in just the var name, it prints out the contents of the var
-* if element already is painted (has stuff in class="xxx"), element's colors won't change even after calling red or stripe
-
-zhong1 yao4 de code snippets
-* console.log("AYO");
-* document.getElementById("thelist");
-* document.createElement("li"); // <li> blahblah </li>
-* newitem.innerHTML = text; <blah> text </blah>
-* var listitems = document.getElementsByTagName('li'); //gets you a list of all elements with tag <li>
-* items[i].classList.add('red'); //adds red to class of element
+* <var>.addEventListener(<event>, <function>)\
+* getElement.innerHTML to change inside of text
+* Math.floor() floors the number
+* make sure you use getElementById to get the element and store it into a var

@@ -1,4 +1,4 @@
-//Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
+//Team ChocolateVanilla:: Tomas Acuna, Yaying Liang Li
 //SoftDev pd1
 //K29 -- Clicky clicky events
 //2022-02-08
@@ -100,7 +100,7 @@ function fib(n) { //0, 1, 1, 2, 3, 5, 8
 function gcd(a, b) {
   if (a == b) return a; //gcd of same number is that number
 
-  small = Math.max(a,b)/2; //can also sqrt it!
+  var small = Math.max(a,b)/2; //can also sqrt it!
   var ans = 1; //1 goes into every number
   for (let i = 1; i <= small; i++) {
     if (a % i == 0 && b % i == 0) { //a is divisible by i and b is divisible by i
@@ -119,22 +119,22 @@ var change = function() {
 elemento.addEventListener("click", change);
 
 
-var fibitem = document.getElementById("div1");
-var facitem = document.getElementById("div2");
-var gcditem = document.getElementById("div3");
+var fibitem = document.getElementById("b1");
+var facitem = document.getElementById("b2");
+var gcditem = document.getElementById("b3");
 
 var fibchange = function() {
-  let num = Math.floor(Math.random()*100) +1; //random number [0,100]
+  let num = Math.floor(Math.random()*10) +1; //random number [0,10]
   console.log(num);
   fibitem.innerHTML = fib(num);
 };
 var facchange = function() {
-  let num = Math.floor(Math.random()*100) +1;
+  let num = Math.floor(Math.random()*10) +1;
   facitem.innerHTML = fact(num);
 };
 var gcdchange = function() {
-  let num1 = Math.floor(Math.random()*100) +1;
-  let num2 = Math.floor(Math.random()*100) +1;
+  let num1 = Math.floor(Math.random()*10) +1;
+  let num2 = Math.floor(Math.random()*10) +1;
   gcditem.innerHTML = gcd(num1, num2);
 };
 
