@@ -110,15 +110,6 @@ function gcd(a, b) {
   return ans;
 };
 
-var displ = function() {
-  var item = document.getElementById("div1");
-  item.innerHTML = fib(5)
-};
-
-var elemento = document.getElementById("b");
-
-var change = function() {
-  elemento.classList.add("green");
-};
-
-elemento.addEventListener("click", change);
+addItem("factorial 10 is " + fact(10));
+addItem("fibonacci 10 is " + fib(10));
+addItem("gcd of 125 and 25 is " + gcd(125,25));
