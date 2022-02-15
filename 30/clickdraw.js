@@ -2,7 +2,7 @@
 var c = document.getElementById("slate");
 
 //instantiate a CanvasRenderingContext2D object
-var ctx = c.getContext("2d");
+var ctx = c.getContext("2d"); //the drawing context; where u drawing on?
 
 //init global state var
 var mode = "rect";
@@ -51,7 +51,7 @@ var drawCircle = (e) => {
 //var draw = function(e) {
 var draw = (e) => {
   if (mode == "rect") {
-    drawRect(e);
+    drawRect(e); //needa pass in your event cuz drawRect uses that event's xy cords
   }
   else {
     drawCircle(e);
@@ -60,11 +60,13 @@ var draw = (e) => {
 
 //var wipeCanvas = function() {
 var wipeCanvas = () => { //no need to have event for param
-
+  //clear the rectangle that is the canvas
+  //(top-left x, top-left y, width, height)
+  ctx.clearRect(0,0,c.width, c.height);
 }
 
 c.addEventListener("click", draw); //click on canvas, go go draw!
 var bToggler = document.getElementById("buttonToggle");
 bToggler.addEventListener("click", toggleMode); //click on button, change mode
-// var clearB = ;
-// clearB.;
+var clearB = document.getElementById("buttonClear");
+clearB.addEventListener("click", wipeCanvas); //click on button, clear the canvas
