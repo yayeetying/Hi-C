@@ -28,6 +28,12 @@ var drawRect = function (e) {
   var mouseX = e.offsetX;
   var mouseY = e.offsetY;
   console.log("mouseclick registered at ", mouseX, mouseY);
+
+  ctx.beginPath(); //called everytime before each line so they can be drawn with different color
+  ctx.fillStyle = 'red';
+  ctx.fillRect(mouseX, mouseY, 100, 200); //(x,y,width,height);
+  //if use fillStyle, use fill<shape>?
+  ctx.stroke(); //actually draw the rect on canvas
 }
 
 //var drawCircle = funciton(e) {
