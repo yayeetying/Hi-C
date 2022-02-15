@@ -1,5 +1,5 @@
 //retrieve node in DOM via ID
-var c = document.getElementByID("slate");
+var c = document.getElementById("slate");
 
 //instantiate a CanvasRenderingContext2D object
 var ctx = c.getContext("2d");
@@ -32,16 +32,18 @@ var drawRect = function (e) {
 
 //var drawCircle = funciton(e) {
 var drawCircle = (e) => {
+  var mouseX = e.offsetX;
+  var mouseY = e.offsetY;
   console.log("mouseclick registered at ", mouseX, mouseY);
 }
 
 //var draw = function(e) {
 var draw = (e) => {
   if (mode == "rect") {
-    drawRect;
+    drawRect(e);
   }
   else {
-    drawCircle;
+    drawCircle(e);
   }
 }
 
@@ -51,7 +53,7 @@ var wipeCanvas = () => { //no need to have event for param
 }
 
 c.addEventListener("click", draw); //click on canvas, go go draw!
-var bToggler = document.getElementByID("buttonToggle");
+var bToggler = document.getElementById("buttonToggle");
 bToggler.addEventListener("click", toggleMode); //click on button, change mode
 // var clearB = ;
 // clearB.;
