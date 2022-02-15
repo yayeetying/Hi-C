@@ -13,17 +13,20 @@ var mode = "rect";
 var toggleMode = (e) => {
   console.log("toggling...");
   if (mode=="rect") {
-    bToggler.innerHTML
+    mode = "circle"; //change mode from rect to circle
+    bToggler.innerHTML = "rect"; //if user clicks button again, it'll be rect
   }
   else { //mode is "circle"
-
+    mode = "rect";
+    bToggler.innerHTML = "circle";
   }
 }
 
 //traditional function
 var drawRect = function (e) {
-  var mouseX =
-  var mouseY =
+  //(x,y) coords of upper-left hand corner of rectangle
+  var mouseX = e.offsetX;
+  var mouseY = e.offsetY;
   console.log("mouseclick registered at ", mouseX, mouseY);
 }
 
@@ -34,7 +37,12 @@ var drawCircle = (e) => {
 
 //var draw = function(e) {
 var draw = (e) => {
-
+  if (mode == "rect") {
+    drawRect;
+  }
+  else {
+    drawCircle;
+  }
 }
 
 //var wipeCanvas = function() {
@@ -42,8 +50,8 @@ var wipeCanvas = () => { //no need to have event for param
 
 }
 
-c.addEventListener("click", draw);
+c.addEventListener("click", draw); //click on canvas, go go draw!
 var bToggler = document.getElementByID("buttonToggle");
-bToggler.addEventListener("click", toggleMode);
-var clearB = ;
-clearB.;
+bToggler.addEventListener("click", toggleMode); //click on button, change mode
+// var clearB = ;
+// clearB.;
