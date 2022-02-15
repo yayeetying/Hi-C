@@ -41,6 +41,11 @@ var drawCircle = (e) => {
   var mouseX = e.offsetX;
   var mouseY = e.offsetY;
   console.log("mouseclick registered at ", mouseX, mouseY);
+
+  ctx.beginPath();
+  ctx.strokeStyle = "black";
+  ctx.arc(mouseX, mouseY, 100, 0, 2*Math.PI); //summon a circle!: (x,y,radius,startAngle,endAngle)
+  ctx.stroke();
 }
 
 //var draw = function(e) {
