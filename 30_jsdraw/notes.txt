@@ -1,0 +1,19 @@
+Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
+SoftDev pd1
+K30 -- canvas based JS drawing
+2022-02-14
+
+Toolbox (in thine own words):
+-clearRect():
+-getElementById():
+-addEventListener():
+-fillStyle():
+-strokeStyle():
+-fillText():
+-fillStyle:
+-arc():
+-fill():
+-stroke():
+-Math.PI
+-offsetX
+-offsetY
