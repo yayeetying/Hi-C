@@ -31,17 +31,17 @@ var clear = (e) => {
 
 
 var radius = 0;
-var growing = true;
+var growing = true; //is the circle growing?
 
 //var drawDot = function() {
 var drawDot = () => {
   console.log("drawDot invoked...");
 
   clear();
-  if (growing == true && radius >= 250) {
+  if (growing == true && radius >= 250) { //250 = max radius of canvas (500/2)
     growing = false;
   }
-  else if (growing == false && radius <= 1) {
+  else if (growing == false && radius <= 1) { //1 is min radius of canvas
     growing = true;
   }
   if (growing == true) {
@@ -53,8 +53,8 @@ var drawDot = () => {
   ctx.beginPath();
   ctx.arc(250, 250, radius, 0, 2*Math.PI); //summon a circle!: (x,y,radius,startAngle,endAngle)
   ctx.fill();
-//  ctx.stroke();
-    requestID = window.requestAnimationFrame(drawDot);
+
+  requestID = window.requestAnimationFrame(drawDot); //before browser renders the next frame, call the function held at the variable drawDot
 
   // OUR CODE HERE
   /*
@@ -73,7 +73,8 @@ var drawDot = () => {
 //var stopIt = function() {
 var stopIt = () => {
   console.log("stopIt invoked...")
-  requestID = window.cancelAnimationFrame(requestID);
+  requestID = window.cancelAnimationFrame(requestID); //previous requestID was requestAnimationFrame; cancel this previous requestID
+  //requestID is now null
   console.log( requestID );
 
   // YOUR CODE HERE
@@ -87,4 +88,5 @@ var stopIt = () => {
 
 
 dotButton.addEventListener( "click", function() {if (requestID == null) {drawDot()}} );
+//if requestID != null, then it means the circle is growing / animating --> even if user clicks button, the fxn drawDot won't be called
 stopButton.addEventListener( "click",  stopIt );
