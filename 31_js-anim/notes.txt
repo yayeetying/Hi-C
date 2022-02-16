@@ -2,3 +2,10 @@ Team ApesTogetherStrong :: Joshua Kloepfer, Yaying Liang Li
 SoftDev pd1
 K31 -- canvas based JS animation
 2022-02-17
+
+* requestID is like an identifier -- it's not about the number of frames or sumn
+* requestID = window.requestAnimationFrame(<fxn>)
+  * before browser renders the next frame, call the function held at the variable drawDot
+  * returns a long that uniquely identifies the callback
+* window.cancelAnimationFrame(requestID) ==> undefined
+  * cancels animation frame referred to by requestID
