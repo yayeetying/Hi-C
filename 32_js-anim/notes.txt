@@ -1,0 +1,18 @@
+Haotian Gan, Yaying
+SoftDev
+K32 -- More Moving Parts
+2022-02-18
+Time spent: 1h
+
+Image()
+IMAGE_OBJ.src
+
+Usage:
+var myImage = new Image(100, 200);
+myImage.src = 'picture.jpg';
+document.body.appendChild(myImage);
+
+
+CANVAS_CONTEXT.drawImage() - Draws the Image
+Math.random() - [0, 1)
+Math.floor() - Floors the number

@@ -1,92 +1,107 @@
-// Team ApesTogetherStrong :: Yaying Liangli, Joshua Kloepfer
-// SoftDev pd1
-// K31 -- canvas based JS animation
-// 2022-02-17
+/*
+Haotian Gan, Yaying
+SoftDev
+K32 -- More Moving Parts
+2022-02-18
+Time spent: 1h
+*/
 
-// model for HTML5 canvas-based animation
+const canvas = document.getElementById("slate");
+const animate = document.getElementById("animate");
+const stopButton = document.getElementById("stop");
+const ctx = canvas.getContext("2d");
+const dvdLogo = document.getElementById("dvdLogo");
+const randomPosButton = document.getElementById("randomPosButton");
 
-// SKEELTON
+let rect = canvas.getBoundingClientRect();
+canvas.width = rect.width;
+canvas.height = rect.height;
 
+function clearScreen() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
 
-//access canvas and buttons via DOM
-var c = document.getElementById("playground");// GET CANVAS
-var dotButton = document.getElementById("buttonCircle");// GET DOT BUTTON
-var stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
+let vx = 300;
+let vy = 300;
+let x = canvas.width / 2;
+let y = canvas.height / 2;
 
-//prepare to interact with canvas in 2D
-var ctx = c.getContext("2d");// YOUR CODE HERE
+let freeHeight = canvas.height - dvdLogo.height;
+let freeWidth = canvas.width - dvdLogo.width;
 
-//set fill color to team color
-ctx.fillStyle = "blue";// YOUR CODE HERE
+window.addEventListener("resize", () => {
+  let rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = rect.height;
+  freeHeight = canvas.height - dvdLogo.height;
+  freeWidth = canvas.width - dvdLogo.width;
+});
 
-var requestID = null;  //init global var for use with animation frames
+const dvdLogoWidth = dvdLogo.width;
+const dvdLogoHeight = dvdLogo.height;
 
-//var clear = function(e) {
-var clear = (e) => {
-  console.log("clear invoked...");
-  ctx.clearRect(0,0,c.width, c.height);
-  // OUR CODE HERE
-};
-
-
-var radius = 0;
-var growing = true; //is the circle growing?
-
-//var drawDot = function() {
-var drawDot = () => {
-  console.log("drawDot invoked...");
-
-  clear();
-  if (growing == true && radius >= 250) { //250 = max radius of canvas (500/2)
-    growing = false;
+function tick(callback) {
+  let currentTime;
+  let id;
+  function animate(timestamp) {
+    if (currentTime === undefined) currentTime = timestamp;
+    callback(timestamp - currentTime);
+    currentTime = timestamp;
+    id = requestAnimationFrame(animate);
   }
-  else if (growing == false && radius <= 1) { //1 is min radius of canvas
-    growing = true;
+  id = requestAnimationFrame(animate);
+  return {
+    stop() {
+      cancelAnimationFrame(id);
+    },
+  };
+}
+
+function simulate(deltaTime) {
+  //This code assumes that the dvd logo does not bounces more than twice in one axis during the duration of deltaTime
+  let seconds = deltaTime / 1000;
+  const xChange = seconds * vx;
+  const yChange = seconds * vy;
+  const xDist = Math.abs(xChange);
+  const yDist = Math.abs(yChange);
+  //Calculate position after bounce
+  const remainingWidth = vx > 0 ? freeWidth - x : x;
+  const remainingHeight = vy > 0 ? freeHeight - y : y;
+  if (remainingWidth < xDist) {
+    vx *= -1;
+    x = vx > 0 ? xDist - remainingWidth : freeWidth - (xDist - remainingWidth);
   }
-  if (growing == true) {
-    radius += 5;
+  if (remainingHeight < yDist) {
+    vy *= -1;
+    y =
+      vy > 0 ? yDist - remainingHeight : freeHeight - (yDist - remainingHeight);
   }
-  else {
-    radius -= 5;
+  if (!(remainingWidth < xDist || remainingHeight < yDist)) {
+    x += xChange;
+    y += yChange;
   }
-  ctx.beginPath();
-  ctx.arc(250, 250, radius, 0, 2*Math.PI); //summon a circle!: (x,y,radius,startAngle,endAngle)
-  ctx.fill();
+  clearScreen();
+  ctx.drawImage(dvdLogo, x, y, dvdLogo.width, dvdLogo.height);
+}
 
-  requestID = window.requestAnimationFrame(drawDot); //before browser renders the next frame, call the function held at the variable drawDot
+let ticker;
+animate.addEventListener("click", () => {
+  if (ticker) {
+    x = canvas.width / 2;
+    y = canvas.height / 2;
+    return;
+  }
+  ticker = tick(simulate);
+});
 
-  // OUR CODE HERE
-  /*
-    ...to
-    Wipe the canvas,
-    Repaint the circle,
-    ...and somewhere (where/when is the right time?)
-    Update requestID to propagate the animation.
-    You will need
-    window.cancelAnimationFrame()
-    window.requestAnimationFrame()
-   */
-};
+stopButton.addEventListener("click", () => {
+  if (!ticker) return;
+  ticker.stop();
+  ticker = undefined;
+});
 
-
-//var stopIt = function() {
-var stopIt = () => {
-  console.log("stopIt invoked...")
-  requestID = window.cancelAnimationFrame(requestID); //previous requestID was requestAnimationFrame; cancel this previous requestID
-  //requestID is now null
-  console.log( requestID );
-
-  // YOUR CODE HERE
-  /*
-    ...to
-    Stop the animation
-    You will need
-    window.cancelAnimationFrame()
-  */
-};
-
-
-
-dotButton.addEventListener( "click", function() {if (requestID == null) {drawDot()}} );
-//if requestID != null, then it means the circle is growing / animating --> even if user clicks button, the fxn drawDot won't be called
-stopButton.addEventListener( "click",  stopIt );
+randomPosButton.addEventListener("click", () => {
+  if (!ticker) return;
+  x = Math.random() * freeWidth + dvdLogo.width / 2;
+  y = Math.random() * freeHeight + dvdLogo.height / 2;
+});

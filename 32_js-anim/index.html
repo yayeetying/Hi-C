@@ -1,46 +1,77 @@
+<!--
+Haotian Gan, Yaying
+SoftDev
+K32 -- More Moving Parts
+2022-02-18
+Time spent: 1h
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Team ApplesSanitizer:: Haotian Gan, Yaying Liang Li
-      SoftDev pd1
-      K32 -- canvas based JS animation and drawImage
-      2022-02-17
-  -->
-
   <head>
-    <meta charset="utf-8"/>
-    <title>basic JS canvas work</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <img
+      style="display: none"
+      id="dvdLogo"
+      src="logo_dvd.jpg"
+      width="75px"
+      height="44.875"
+    />
+    <style>
+      .slateStyles {
+        border: solid 1px black;
+        margin-top: 20px;
+      }
+      #slate {
+        display: block;
+        aspect-ratio: 1/1;
+        width: 100%;
+      }
+      .container {
+        margin-left: auto;
+        margin-right: auto;
+        aspect-ratio: 1/1;
+        width: clamp(100px, 75%, 85vh);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      button {
+        margin: 6px 2px 6px 2px;
+        width: 3rem;
+      }
+      button:first-child {
+        margin: 6px 2px 6px 2px;
+        width: 5rem;
+      }
+      .flexbox {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .flexbox button {
+        padding: 4px;
+      }
+    </style>
   </head>
+  <body>
+    <div class="container">
+      <div class="slateStyles">
+        <canvas id="slate"></canvas>
+      </div>
+      <div class="flexbox">
+        <button id="animate">Animate</button>
+        <button id="randomPosButton" style="width: max-content">
+          I'm waiting for the movie to start
+        </button>
 
-
-  <head>
-    <meta charset="utf-8"/>
-    <title>The State of Animania</title>
-  </head>
-
-  <style>
-    #playground { border: 1px solid black }
-  </style>
-
-  <h1>expansion + contraction + salvation </h1>
-
-  <div>
-    <button id="buttonCircle">
-      I'm an Animaniac!
-    </button>
-
-    <button id="buttonDVD">
-      I'm Waiting For The Movie to Start
-    </button>
-
-    <button id="buttonStop">
-      STOP
-    </button>
-  </div>
-
-  <img src = "logo_dvd.jpg">
-  <canvas width="500" height="500" id="playground">
-  </canvas>
-
-  <script src="animate.js"></script>
-
+        <button id="stop" className="margin">Stop</button>
+      </div>
+    </div>
+    <script src="animate.js"></script>
+  </body>
 </html>
