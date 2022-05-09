@@ -1,0 +1,46 @@
+Yaying Liang Li
+SoftDev pd1
+K37 -- MongoDB Chapter 3
+2022-05-08
+
+Inserting New Documents
+  - every MongoDB document must have a unique _id value
+  - when inserting new doc, _id is populated w/ value of type ObjectId(), unless otherwise specified
+  * follow formatting of previous entities for less annoyance later
+
+Insert Errors
+  - when duplicate key issue, use --drop to remove whole collection
+
+- db.<collection>.findOne() - finds random document in collection
+- db.<collection>.insert({ ~ }) - add document to collection
+* can add identical content as long as _id is different
+
+Inserting Multiple Documents
+- db.<collection>.insert( [
+  {"test":1},
+  {"test":2}
+] )
+  - added array of documents
+
+- {"ordered": false} after array of docs
+  - false: all docs w/ unique _id values will be inserted, even if errors pop up
+  - true: operation is halted when error occurs (but previously inserted docs stay inserted)
+*implicit creation of databases and collections (and also fields)
+*no data associated to db, db will not be there anymore
+
+Updating Documents
+-Thru Atlas Cluster: adding Object (sub-doc) vs. adding simple field-value pair
+-Thru Mongo Shell: updateOne() vs updateMany()
+
+-db.<collection>.updateMany(<query>, <update>)
+-db.<collection>.updateMany({"city":"HUDSON"}, {"$inc":{"pop":10}})
+  - update values where city = HUDSON so that pop increases by 10
+
+-"$inc": increments value by given amount
+-"$set": sets value
+-"$push": {<field1>: <value1>, ...} - adds element to array field
+
+Deleting Documents and Collections
+-deleteOne() vs deleteMany() -- deletes documents
+  - deleteOne() make sure ONLY use if query is _id
+-db.<collection>.drop() -- deletes collections
