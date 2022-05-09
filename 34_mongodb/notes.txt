@@ -1,0 +1,8 @@
+Yaying Liang Li
+SoftDev pd1
+K34 -- MongoDB Intro Video
+2022-05-05
+
+- Yulia Genkina has a nice smile haha
+- curious how MongoDB is different from other DBs, specifically SQL (because we have experience w/ this already)
+- MongoDB's website with white and green color scheme is nice
