@@ -1,0 +1,33 @@
+Yaying Liang Li
+SoftDev pd1
+K38 -- MongoDB Chapter 4
+2022-05-08
+
+CRUD Operations
+
+Operators
+  - update operators
+  - query operators: locate data
+  - comparison operators: find data within certain range
+
+* $ precedes operators
+- $eq - equal
+- $ne - not equal
+- $gt - greater than
+- $lt - less than
+- $gte
+- $lte
+- $or
+- $and
+{<field>: {<operator>:<value>}}
+
+Logic Operators
+- $and - meets all query clauses
+- $or - at least 1 matched query
+- $nor - fails to match both clauses
+*all 3 above: {<operation>:[{statement1}, {2}...]}
+- $not - negates query requirement
+*{$not: {statement}}
+
+$and - Implicit; default operator when one is not specified
+  - {"student_id":{"$gt":25, "$lt": 100}}
