@@ -1,0 +1,55 @@
+Yaying Liang Li
+SoftDev pd1
+K35 -- MongoDB Chapter 2
+2022-05-08
+
+- use documents [== docs in yaoming-speak] to store data
+- when you view docs in Mongo shell, you're viewing them in JSON (way/format to store data; JS Standard Object Notation)
+
+JSON Requirements:
+- { }
+- key : value pair,
+  key : value pair
+- "keys" have " " quotation marks
+
+-sub-document: doc in a doc; key in a JSON object has a doc/JSON object as the value
+-JSON can have arrays, ints, strings, booleans as data types
+
+-Solution to space-consuming + slow JSON
+  - BSON! data in memory is stored in BSON (binary JSON)
+    - yes speed, space, flexibility
+    - BSON can have JSON's data types + time + floats data types, + more
+
+**MongoDB stores data as BSON, but can be viewed as JSON data
+
+*Importing & Exporting*
+JSON (readable)
+  - mongoimport -- import
+  - mongoexport -- export
+BSON (lighter, faster)
+  - mongorestore -- import
+  - mongodump -- export
+
+URI string (connection string): Uniform resource identifier
+
+*Data Explorer*
+- (clicking) Atlas --> Clusters --> Collections
+- filter query must be valid JSON {"state":"NY"}
+  - case sensitive? NY != ny?
+- make sure filter query matches data type (so if int, no need for quotes)
+
+*find() Command*
+- admin db targets authentication of db (which users have access to the db?)
+- namespace: <db>.<collection> (ie. sample_training.zips)
+
+- show dbs
+- use <db name>
+- show collections
+- db.<collection>.find({"state":"NY"})
+  - use valid JSON for query string
+- db.<collection>.find(~).count()
+- db.<collection>.find(<query>).pretty() -- formats for readability
+- db.<collection>.find({}) -- shows random document
+
+- it: iterates thru cursor (points to result set of a query)
+- pointer: direct address to memory location
