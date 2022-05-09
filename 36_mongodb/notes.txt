@@ -1,6 +1,6 @@
 Yaying Liang Li
 SoftDev pd1
-K35 -- MongoDB Chapter 2
+K36 -- MongoDB Chapter 2
 2022-05-08
 
 - use documents [== docs in yaoming-speak] to store data
