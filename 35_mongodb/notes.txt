@@ -1,0 +1,27 @@
+Yaying Liang Li
+SoftDev pd1
+K35 -- MongoDB Chapter 1
+2022-05-07
+
+MongoDB
+  - NoSQL database
+  - not rows/columns/tables, but still organizes data
+  - stored as documents in collections
+    - documents: stores data as a set of field-value pairs
+      - {
+          <field>: <value>,
+          <field>: <value>
+        }
+      - <field> is similar to an identifier
+    - documents kinda similar to dictionary? Or JSON formatted thing
+    - collections: organized store of documents
+
+Atlas Cloud Database
+  - data storage & retrieval
+  - deploy clusters - group of servers that store data
+    - in replica set: connected MongoDB instances (machines) that store same data
+      - 1 instance fails, you have other machines in replica set!
+  - manages cluster creation, and runs and maintains databases
+
+**user and pass in notebook
+- connect to Atlas cluster --> MongoDB shell installed already --> version 4.4
